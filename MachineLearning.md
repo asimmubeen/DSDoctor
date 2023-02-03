@@ -10,19 +10,19 @@ In this type of learning, the algorithm is trained on a labeled dataset, meaning
 
 Some common supervised machine learning algorithms include:
 
-[Linear Regression](/LinearRegression.md): used to model the linear relationship between a dependent variable and one or more independent variables.
+**[Linear Regression](/LinearRegression.md)**: used to model the linear relationship between a dependent variable and one or more independent variables.
 
-[Logistic regression](/LogisticRegression.md): used to model the probability of a binary outcome.
+**[Logistic regression](/LogisticRegression.md)**: used to model the probability of a binary outcome.
 
-[Decision Trees](/DecisionTrees.md): used to model decisions or decisions based on certain conditions.
+**[Decision Trees](/DecisionTrees.md)**: used to model decisions or decisions based on certain conditions.
 
-Random Forest: an ensemble of decision trees, used to improve the accuracy and stability of the predictions.
+**Random Forest**: an ensemble of decision trees, used to improve the accuracy and stability of the predictions.
 
-K-Nearest Neighbors (KNN): used for classification by finding the K nearest data points and returning the majority class.
+**K-Nearest Neighbors (KNN)**: used for classification by finding the K nearest data points and returning the majority class.
 
-Naive Bayes: used for classification by making predictions based on the probability of each class and the likelihood of the features given the class.
+**Naive Bayes**: used for classification by making predictions based on the probability of each class and the likelihood of the features given the class.
 
-Support Vector Machines (SVM): used for classification and regression by finding the hyperplane that best separates the data into classes.
+**Support Vector Machines (SVM)**: used for classification and regression by finding the hyperplane that best separates the data into classes.
 
 Neural Networks: used for a wide range of tasks, including image recognition and natural language processing, by modeling complex relationships between inputs and outputs.
 
@@ -31,17 +31,17 @@ In unsupervised learning, the algorithm is trained on an unlabeled dataset, mean
 
 Unsupervised machine learning is a type of machine learning where the goal is to find structure or patterns in the data, without being given explicit labels or target values. Some common unsupervised learning methods are:
 
-Clustering: This method groups similar data points together based on some similarity metric. Examples of clustering algorithms include K-Means, Hierarchical Clustering, and DBSCAN.
+**Clustering**: This method groups similar data points together based on some similarity metric. Examples of clustering algorithms include K-Means, Hierarchical Clustering, and DBSCAN.
 
-Dimensionality Reduction: This is the process of reducing the number of features in the data while preserving the important information. This can be useful for visualizing high-dimensional data, reducing the complexity of the data, and removing noise. Common dimensionality reduction techniques include Principal Component Analysis (PCA), t-SNE, and Autoencoders.
+**Dimensionality Reduction**: This is the process of reducing the number of features in the data while preserving the important information. This can be useful for visualizing high-dimensional data, reducing the complexity of the data, and removing noise. Common dimensionality reduction techniques include Principal Component Analysis (PCA), t-SNE, and Autoencoders.
 
-Anomaly detection: This method is used to detect data points that are significantly different from the majority of the data. Examples of anomaly detection algorithms include Isolation Forest, Z-Score, Mahalanobis Distance, One-Class SVM, and Local Outlier Factor.
+**Anomaly detection**: This method is used to detect data points that are significantly different from the majority of the data. Examples of anomaly detection algorithms include Isolation Forest, Z-Score, Mahalanobis Distance, One-Class SVM, and Local Outlier Factor.
 
-Association Rule Learning: This is the process of finding relationships between variables in a large dataset. Association rule learning algorithms are commonly used in market basket analysis and recommender systems. Apriori and Eclat are two common association rule learning algorithms.
+**Association Rule Learning**: This is the process of finding relationships between variables in a large dataset. Association rule learning algorithms are commonly used in market basket analysis and recommender systems. Apriori and Eclat are two common association rule learning algorithms.
 
-Generative models: These models generate new data samples that are similar to the input data. Examples of generative models include Generative Adversarial Networks (GANs), Variational Autoencoders (VAEs), and Restricted Boltzmann Machines (RBMs).
+**Generative models**: These models generate new data samples that are similar to the input data. Examples of generative models include Generative Adversarial Networks (GANs), Variational Autoencoders (VAEs), and Restricted Boltzmann Machines (RBMs).
 
-Non-negative Matrix Factorization (NMF): This is the process of factorizing a matrix into two non-negative matrices, where the product of the two matrices approximates the original matrix. NMF is commonly used for topic modeling and dimensionality reduction.
+**Non-negative Matrix Factorization (NMF)**: This is the process of factorizing a matrix into two non-negative matrices, where the product of the two matrices approximates the original matrix. NMF is commonly used for topic modeling and dimensionality reduction.
 
 These unsupervised learning methods can be used for a wide range of tasks, such as data visualization, data compression, data generation, data pre-processing, and anomaly detection.
 
