@@ -9,6 +9,22 @@ Linear regression is a simple and powerful method for modeling linear relationsh
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/24811295/216652104-a52f07ec-e361-4b10-b960-f96c65e08a7f.png" height="300" width="300" > </p>
 
+There are several key assumptions that must be met in order to obtain accurate and meaningful results from linear regression:
+
+**Linearity**: The relationship between the dependent variable and the independent variables should be linear. If the relationship is not linear, it may be necessary to transform the variables or use a different method, such as non-linear regression or machine learning algorithms.
+
+**Independence**: The observations should be independent of each other. This means that the value of the dependent variable for one observation should not influence the value of the dependent variable for another observation.
+
+**Homoscedasticity**: The variance of the residuals should be constant across the range of the independent variables. If the variance is not constant, the regression line may be biased or the standard errors may be underestimated.
+
+**Normality**: The residuals should be normally distributed. This assumption can be checked using a normal probability plot or a formal test of normality.
+
+**No multicollinearity**: The independent variables should not be highly correlated with each other. If two or more independent variables are highly correlated, it can be difficult to determine their individual effects on the dependent variable.
+
+**No auto-correlation**: The residuals should not be correlated with each other. If the residuals are correlated, it may indicate that important variables have been omitted from the model or that the model is misspecified.
+
+It is important to check these assumptions before fitting a linear regression model and to take appropriate action if any of the assumptions are violated. Failing to meet these assumptions can lead to biased or incorrect results.
+
 ## Python Code
 Here is an example of linear regression in Python using the scikit-learn library:
 
