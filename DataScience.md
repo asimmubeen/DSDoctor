@@ -12,3 +12,15 @@ Data science is the process of extracting insights and knowledge from data throu
 **Recommender systems**: using data to suggest products or items that a user might be interested in based on their past behavior.
 
 **Image or speech recognition**: using data to automatically identify and categorize images or speech.
+
+Data Science involves several steps, following are the most important steps:
+
+1. **Data collection**: Gathering data from various sources, such as databases, APIs, or web scraping.
+
+2. **Data cleaning and preprocessing**: Removing or correcting missing or incorrect data, and transforming the data into a format that can be used for analysis.
+
+3. **Data exploration**: Analyzing the data to gain a better understanding of its distribution, relationships, and patterns.
+
+4. **Data modeling**: Using mathematical or statistical models to represent the relationships in the data and make predictions.
+
+5. **Data visualization**: Presenting the insights and results obtained from the data in a clear and understandable way, often through graphs, charts, or maps.
