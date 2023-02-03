@@ -27,36 +27,32 @@ Once the coefficients have been estimated, the logistic regression model can be 
 
 Here is a simple example of logistic regression in Python using the scikit-learn library:
 
+```python
 import numpy as np
 import pandas as pd
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 
-\# Load the data
 
+# Load the data
 df = pd.read_csv("data.csv")
 
-\# Split the data into a training set and a test set
-
+# Split the data into a training set and a test set
 X_train, X_test, y_train, y_test = train_test_split(df.drop('target', axis=1), df['target'], test_size=0.2)
 
-\# Create a logistic regression object
-
+# Create a logistic regression object
 logistic_reg = LogisticRegression()
 
-\# Fit the logistic regression model to the training data
-
+# Fit the logistic regression model to the training data
 logistic_reg.fit(X_train, y_train)
 
-\# Make predictions on the test data
-
+# Make predictions on the test data
 y_pred = logistic_reg.predict(X_test)
 
-\# Evaluate the performance of the model
-
+# Evaluate the performance of the model
 accuracy = np.mean(y_pred == y_test)
 print("Accuracy:", accuracy)
-
+```
 
 In this example, the data is loaded from a CSV file using pandas, and then split into a training set and a test set using the train_test_split function. The logistic regression model is created using the LogisticRegression class, and then fitted to the training data using the fit method. Finally, the model is used to make predictions on the test data using the predict method, and the accuracy of the predictions is computed and printed.
 
