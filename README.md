@@ -5,6 +5,6 @@ Data science is an interdisciplinary field that uses scientific methods, process
 
 In other words, machine learning is a tool used in data science to analyze and model data.
 
-[Machine Learning](/MachineLearning.md)
+### [Machine Learning](/MachineLearning.md)
 
-[Data Science](/DataScience.md)
+### [Data Science](/DataScience.md)
