@@ -9,3 +9,35 @@ Linear regression is a simple and powerful method for modeling linear relationsh
 
 <p align="center"> <img src="https://user-images.githubusercontent.com/24811295/216652104-a52f07ec-e361-4b10-b960-f96c65e08a7f.png" height="300" width="300" > </p>
 
+## Python Code
+Here is an example of linear regression in Python using the scikit-learn library:
+
+In the following example, the data is loaded from a CSV file using pandas, and then split into a training set and a test set using the train_test_split function. The linear regression model is created using the LinearRegression class, and then fitted to the training data using the fit method. Finally, the model is used to make predictions on the test data using the predict method, and the mean squared error of the predictions is computed and printed.
+
+```python
+import numpy as np
+import pandas as pd
+from sklearn.linear_model import LinearRegression
+from sklearn.model_selection import train_test_split
+
+# Load the data
+df = pd.read_csv("data.csv")
+
+# Split the data into a training set and a test set
+X_train, X_test, y_train, y_test = train_test_split(df.drop('target', axis=1), df['target'], test_size=0.2)
+
+# Create a linear regression object
+lin_reg = LinearRegression()
+
+# Fit the linear regression model to the training data
+lin_reg.fit(X_train, y_train)
+
+# Make predictions on the test data
+y_pred = lin_reg.predict(X_test)
+
+# Evaluate the performance of the model
+mse = np.mean((y_pred - y_test)**2)
+print("Mean Squared Error:", mse)
+
+
+```
