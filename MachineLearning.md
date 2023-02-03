@@ -14,7 +14,7 @@ Some common supervised machine learning algorithms include:
 
 [Logistic regression](/LogisticRegression.md): used to model the probability of a binary outcome.
 
-Decision Trees: used to model decisions or decisions based on certain conditions.
+[Decision Trees](/DecisionTrees.md): used to model decisions or decisions based on certain conditions.
 
 Random Forest: an ensemble of decision trees, used to improve the accuracy and stability of the predictions.
 
