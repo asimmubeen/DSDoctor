@@ -11,7 +11,7 @@ $$f(x) = 1 / (1 + e^{-x})$$
 
 where e is the base of the natural logarithm. In logistic regression, the sigmoid function is used to model the probability of a binary outcome as a function of the input variables. The output of the sigmoid function is interpreted as the probability of the positive class, given the values of the independent variables.
 
-![image](https://user-images.githubusercontent.com/24811295/216444943-2e5271cb-76a9-4ee7-8a80-1fe5ef5b422e.png)
+<p align="center"> <img src="https://user-images.githubusercontent.com/24811295/216444943-2e5271cb-76a9-4ee7-8a80-1fe5ef5b422e.png" height="300" width="300" > </p>
 
 In logistic regression, the sigmoid function is used to model the relationship between the independent variables and the binary dependent variable. The basic idea is to use the independent variables to calculate a linear combination of their values, which is then transformed by the sigmoid function to produce a probability value between 0 and 1. This transformed value can then be used to make predictions about the binary dependent variable.
 
