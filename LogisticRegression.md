@@ -19,7 +19,9 @@ More specifically, the logistic regression model is based on the following equat
 
 $$p(y=1|x) = 1 / (1 + e^{-(b_0 + b_1  x_1 + b_2  x_2 + ... + b_n  x_n)})$$
 
-where $p(y=1|x)$ is the predicted probability of the positive class (y = 1), given the values of the independent variables x1, x2, ..., xn. b0, b1, b2, ..., bn are the coefficients of the model, which are estimated from the training data using maximum likelihood estimation.
+where $p(y=1|x)$ is the predicted probability of the positive class (y = 1), given the values of the independent variables $x_1, x_2, ..., x_n$. 
+
+$b_0, b_1, b_2, ..., b_n$ are the coefficients of the model, which are estimated from the training data using maximum likelihood estimation.
 
 Once the coefficients have been estimated, the logistic regression model can be used to make predictions for new data by plugging in the values of the independent variables and calculating the corresponding probability of the positive class. If the calculated probability is greater than or equal to 0.5, the prediction will be the positive class (y = 1), otherwise it will be the negative class (y = 0). The sigmoid function is used to ensure that the predicted probability values always fall within the range of 0 and 1, which is appropriate for modeling binary outcomes.
 
