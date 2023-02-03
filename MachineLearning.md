@@ -10,7 +10,7 @@ In this type of learning, the algorithm is trained on a labeled dataset, meaning
 
 Some common supervised machine learning algorithms include:
 
-Linear Regression: used to model the linear relationship between a dependent variable and one or more independent variables.
+[Linear Regression](/LinearRegression.md): used to model the linear relationship between a dependent variable and one or more independent variables.
 
 [Logistic regression](/LogisticRegression.md): used to model the probability of a binary outcome.
 
