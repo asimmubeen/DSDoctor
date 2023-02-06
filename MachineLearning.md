@@ -16,7 +16,7 @@ Some common supervised machine learning algorithms include:
 
 **[Decision Trees](/DecisionTrees.md)**: used to model decisions or decisions based on certain conditions.
 
-**Random Forest**: an ensemble of decision trees, used to improve the accuracy and stability of the predictions.
+**[Random Forest](/RandomForest.md)**: an ensemble of decision trees, used to improve the accuracy and stability of the predictions.
 
 **K-Nearest Neighbors (KNN)**: used for classification by finding the K nearest data points and returning the majority class.
 
