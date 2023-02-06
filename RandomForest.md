@@ -7,4 +7,4 @@ Once all the decision trees have been trained, the final prediction is made by c
 
 Random Forest has several advantages over single decision trees. For example, it can handle noisy and missing data and can provide a measure of the feature importance. In addition, it can handle large datasets with many features and is relatively fast to train compared to other machine learning algorithms.
 
-In conclusion, Random Forest is a powerful machine learning algorithm that can be used for a wide range of tasks and is particularly useful when dealing with large and complex datasets. It combines the strengths of multiple decision trees to make predictions and is a popular choice among practitioners due to its ease of use and good performance.
+Random Forest is a powerful machine learning algorithm that can be used for a wide range of tasks and is particularly useful when dealing with large and complex datasets. It combines the strengths of multiple decision trees to make predictions and is a popular choice among practitioners due to its ease of use and good performance.
