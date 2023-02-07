@@ -1,10 +1,10 @@
 # Naïve Bayes
 
-Naive Bayes is a probabilistic machine learning algorithm based on Bayes' Theorem, which states that the probability of an event (in this case, a class label) given certain information (in this case, the feature values of an instance) can be calculated as the product of the prior probability of the event and the likelihood of the information given the event, divided by the marginal probability usually called the evidence.
+Naive Bayes is a probabilistic machine learning algorithm based on Bayes' Theorem, which states that the probability of an event (in case of classification, a class label) given certain information (the feature values of an instance) can be calculated as the product of the prior probability of the event and the likelihood of the information given the event, divided by the marginal probability usually called as the evidence.
 
-In the context of Naive Bayes, the algorithm is "naive" because it assumes that all the features are independent, which is often not true. However, despite this oversimplification, Naive Bayes algorithms are known to work well in practice, especially for high-dimensional datasets with a large number of features. 
+In the context of Naive Bayes, the algorithm is "naive" because it assumes that all the features are independent, which is often not true and is a "naive" assumption. However, despite this oversimplification, Naive Bayes algorithms are known to work well in practice, especially for high-dimensional datasets with a large number of features. 
 
-**Note**: One can designed an informed Bayes method based on the available information present using proper prior and informed model.
+**Note**: One can designed an informed Bayes algorithm based on the available information using proper prior and informed likelihood model.
 
 There are three main variants of Naive Bayes:
 
