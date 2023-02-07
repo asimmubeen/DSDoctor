@@ -20,7 +20,7 @@ Some common supervised machine learning algorithms include:
 
 **K-Nearest Neighbors (KNN)**: used for classification by finding the K nearest data points and returning the majority class.
 
-**Naive Bayes**: used for classification by making predictions based on the probability of each class and the likelihood of the features given the class.
+**[Naive Bayes](/NaiveBayes.md)**: used for classification by making predictions based on the probability of each class and the likelihood of the features given the class.
 
 **Support Vector Machines (SVM)**: used for classification and regression by finding the hyperplane that best separates the data into classes.
 
