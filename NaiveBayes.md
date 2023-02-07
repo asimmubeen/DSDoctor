@@ -30,7 +30,7 @@ $$P(X | C) = P(x_1 | C) * P(x_2 | C) * ... * P(x_n | C)$$
 
 The prior probabilities can be estimated from the training data, and the likelihoods can be estimated or assumed using either Gaussian, Multinomial, or Bernoulli distributions, depending on the type of Naive Bayes algorithm being used.
 
-<p> <img src = "https://user-images.githubusercontent.com/24811295/217282028-5862d2b2-2874-433d-b9ba-f4550ed7f7e4.png" height=300 width=400> </p>
+<p align="center"> <img src ="https://user-images.githubusercontent.com/24811295/217283810-ce35567a-aa44-4c8b-9500-0033d3cb3d9a.png" height=250 width=650> </p>
 
 
 Given these estimates, the posterior probability of each class can be calculated for a new instance, and the class with the highest probability can be chosen as the prediction.
