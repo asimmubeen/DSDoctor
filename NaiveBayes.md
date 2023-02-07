@@ -32,7 +32,7 @@ The prior probabilities can be estimated from the training data, and the likelih
 
 <p align="center"> <img src ="https://user-images.githubusercontent.com/24811295/217283810-ce35567a-aa44-4c8b-9500-0033d3cb3d9a.png" height=250 width=650> </p>
 
-<p align="center"> Source: https://thatware.co/naive-bayes/</p>
+<p align="center"> Image Adopted From: https://thatware.co/naive-bayes/</p>
 
 
 Given these estimates, the posterior probability of each class can be calculated for a new instance, and the class with the highest probability can be chosen as the prediction.
