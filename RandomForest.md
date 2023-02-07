@@ -21,3 +21,28 @@ if  $$(1/T) * ∑_{t=1}^T p_t >= 0.5$$
 otherwise $$p = 0$$ 
 
 This equation shows that the final prediction of the Random Forest is a weighted average of the predictions of all the decision trees, with weights equal to the inverse of the number of trees. The weighted average is thresholded at 0.5 to determine the final prediction.
+
+# Python Code
+
+Here's a simple example of how to implement a Random Forest Classifier in Python using the scikit-learn library:
+
+```python
+import numpy as np
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.datasets import make_classification
+
+# Generate a sample dataset for demonstration purposes
+X, y = make_classification(n_samples=1000, n_features=4, random_state=0)
+
+# Initialize the classifier
+clf = RandomForestClassifier(n_estimators=100, random_state=0)
+
+# Fit the classifier to the training data
+clf.fit(X, y)
+
+# Predict the class labels for a sample input
+sample_input = np.array([[0, 0, 0, 0]])
+prediction = clf.predict(sample_input)
+print("Prediction for sample input:", prediction)
+```
+This example generates a sample dataset using the make_classification function from scikit-learn and fits a Random Forest Classifier to the generated data. Finally, the classifier is used to make a prediction for a sample input.
