@@ -64,4 +64,4 @@ print("Prediction for sample input:", prediction)
 
 This example generates a sample dataset using the make_classification function from scikit-learn and fits a Gaussian Naive Bayes classifier to the generated data. Finally, the classifier is used to make a prediction for a sample input.
 
-Similarly, Multinomial Naive Bayes and Bernoulli Naive Bayes can be implemented using the MultinomialNB and BernoulliNB classes from the scikit-learn library, respectively.
+Similarly, _**Multinomial Naive Bayes**_ and **_Bernoulli Naive Bayes_** can be implemented using the **MultinomialNB** and **BernoulliNB** classes from the scikit-learn library, respectively.
