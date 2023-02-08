@@ -20,7 +20,7 @@ Naive Bayes is often used for text classification and spam filtering, as well as
 
 Naive Bayes is based on Bayes' theorem, which states that the probability of a class $C$ given some observed features $X$ can be calculated as:
 
-$$P(C | X) = [P(X | C) * P(C)] / P(X)$$
+$$P(C | X) = \frac{P(X | C) * P(C)}{P(X)}$$
 
 where $P(C | X)$ is the posterior probability of class $C$ given the features $X$, $P(X | C)$ is the likelihood of the features $X$ given class $C$, $P(C)$ is the prior probability of class $C$, and $P(X)$ is the marginal probability of the features $X$.
 
