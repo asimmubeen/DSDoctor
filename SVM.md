@@ -36,3 +36,51 @@ and $$α_i y_i = 0, i = 1, 2, ..., n$$
 where $α$ is the vector of Lagrange multipliers and t is the vector of the target values. The optimization problem can be solved using a variety of optimization algorithms, such as the Sequential Minimal Optimization (SMO) algorithm.
 
 SVM uses the mathematical concepts of hyperplanes and optimization problems to find the boundary that separates the data into different classes with the maximum margin.
+
+## Python Code
+A simple example of coding Support Vector Machines (SVM) in Python using the scikit-learn library:
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn import datasets
+from sklearn.model_selection import train_test_split
+from sklearn import svm
+
+# Load the iris dataset
+iris = datasets.load_iris()
+X = iris["data"]
+y = iris["target"]
+
+# Split the data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=0)
+
+# Train a SVM classifier on the training data
+clf = svm.SVC(kernel='linear', C=1, random_state=0)
+clf.fit(X_train, y_train)
+
+# Predict the class labels for the test data
+y_pred = clf.predict(X_test)
+
+# Evaluate the accuracy of the classifier
+accuracy = np.mean(y_pred == y_test)
+print("Accuracy:", accuracy)
+
+# Plot the decision boundary
+x_min, x_max = X[:, 0].min() - 1, X[:, 0].max() + 1
+y_min, y_max = X[:, 1].min() - 1, X[:, 1].max() + 1
+h = (x_max / x_min)/100
+xx, yy = np.meshgrid(np.arange(x_min, x_max, h), np.arange(y_min, y_max, h))
+plt.subplot(1, 1, 1)
+Z = clf.predict(np.c_[xx.ravel(), yy.ravel()])
+Z = Z.reshape(xx.shape)
+plt.contourf(xx, yy, Z, cmap=plt.cm.Paired, alpha=0.8)
+plt.scatter(X[:, 0], X[:, 1], c=y, cmap=plt.cm.Paired)
+plt.xlabel('Sepal length')
+plt.ylabel('Sepal width')
+plt.xlim(xx.min(), xx.max())
+plt.title('SVM (linear kernel) Decision Boundary')
+plt.show()
+```
+In this example, we use the scikit-learn library to load the iris dataset, split it into training and testing sets, and train a SVM classifier with a linear kernel. The classifier is then used to predict the class labels for the test data, and the accuracy is evaluated. Finally, the decision boundary is plotted to visualize the separation of the classes by the hyperplane found by the SVM algorithm.
+
