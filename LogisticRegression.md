@@ -7,7 +7,7 @@ The logistic regression model is a mathematical equation that defines the relati
 ## The Sigmoid / Logistic Function
 The sigmoid function, also known as the logistic function, is a mathematical function that maps any input value to a value between 0 and 1. It is defined as:
 
-$$f(x) = 1 / (1 + e^{-x})$$
+$$f(x) = \frac{1}{(1 + e^{-x})}$$
 
 where e is the base of the natural logarithm. In logistic regression, the sigmoid function is used to model the probability of a binary outcome as a function of the input variables. The output of the sigmoid function is interpreted as the probability of the positive class, given the values of the independent variables.
 
@@ -17,7 +17,7 @@ In logistic regression, the sigmoid function is used to model the relationship b
 
 More specifically, the logistic regression model is based on the following equation:
 
-$$p(y=1|x) = 1 / (1 + e^{-(b_0 + b_1  x_1 + b_2  x_2 + ... + b_n  x_n)})$$
+$$p(y=1|x) = \frac{1}{(1 + e^{-(b_0 + b_1  x_1 + b_2  x_2 + ... + b_n  x_n)})}$$
 
 where $p(y=1|x)$ is the predicted probability of the positive class (y = 1), given the values of the independent variables $x_1, x_2, ..., x_n$. 
 
