@@ -14,15 +14,16 @@ Some common supervised machine learning algorithms include:
 
 **[Logistic regression](/LogisticRegression.md)**: used to model the probability of a binary outcome.
 
+**[Support Vector Machines (SVM)](/SVM.md)**: used for classification and regression by finding the hyperplane that best separates the data into classes.
+
 **[Decision Trees](/DecisionTrees.md)**: used to model decisions or decisions based on certain conditions.
 
 **[Random Forest](/RandomForest.md)**: an ensemble of decision trees, used to improve the accuracy and stability of the predictions.
 
-**K-Nearest Neighbors (KNN)**: used for classification by finding the K nearest data points and returning the majority class.
-
 **[Naive Bayes](/NaiveBayes.md)**: used for classification by making predictions based on the probability of each class and the likelihood of the features given the class.
 
-**[Support Vector Machines (SVM)](/SVM.md)**: used for classification and regression by finding the hyperplane that best separates the data into classes.
+**K-Nearest Neighbors (KNN)**: used for classification by finding the K nearest data points and returning the majority class.
+
 
 Neural Networks: used for a wide range of tasks, including image recognition and natural language processing, by modeling complex relationships between inputs and outputs.
 
