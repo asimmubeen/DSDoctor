@@ -22,7 +22,7 @@ Some common supervised machine learning algorithms include:
 
 **[Naive Bayes](/NaiveBayes.md)**: used for classification by making predictions based on the probability of each class and the likelihood of the features given the class.
 
-**Support Vector Machines (SVM)**: used for classification and regression by finding the hyperplane that best separates the data into classes.
+**[Support Vector Machines (SVM)](/SVM.md)**: used for classification and regression by finding the hyperplane that best separates the data into classes.
 
 Neural Networks: used for a wide range of tasks, including image recognition and natural language processing, by modeling complex relationships between inputs and outputs.
 
