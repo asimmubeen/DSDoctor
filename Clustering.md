@@ -18,13 +18,13 @@ K-Means is a widely used and simple unsupervised machine learning algorithm that
 
 Here is how the K-Means algorithm works:
 
-Initialization: The algorithm starts by randomly selecting K initial centroids from the data.
+1. Initialization: The algorithm starts by randomly selecting K initial centroids from the data.
 
-Assignment: Each data point is then assigned to the closest centroid based on the Euclidean distance between the data point and the centroids.
+2. Assignment: Each data point is then assigned to the closest centroid based on the Euclidean distance between the data point and the centroids.
 
-Recalculation of Centroids: The mean of all the data points assigned to a particular centroid is then calculated, and the centroid is repositioned to the mean.
+3. Recalculation of Centroids: The mean of all the data points assigned to a particular centroid is then calculated, and the centroid is repositioned to the mean.
 
-Repeat Steps 2 and 3 until the centroids no longer change, or a maximum number of iterations has been reached.
+4. Repeat Steps 2 and 3 until the centroids no longer change, or a maximum number of iterations has been reached.
 
 The K-Means algorithm is sensitive to the initial choice of centroids, and multiple runs of the algorithm with different initializations may lead to different results. To address this, a common practice is to run the algorithm multiple times with different initializations and choose the result that gives the best clustering according to a certain evaluation metric, such as the sum of squared distances between data points and their closest centroids.
 
