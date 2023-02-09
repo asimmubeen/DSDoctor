@@ -30,7 +30,6 @@ The K-Means algorithm is sensitive to the initial choice of centroids, and multi
 
 K-Means is a fast and efficient algorithm for clustering large datasets and is commonly used in applications such as image compression, market segmentation, and document classification. However, the algorithm has some limitations, such as the assumption of spherical cluster shapes and the requirement that the number of clusters K must be specified in advance.
 
-### Mathematically ...
 The K-means algorithm tries to minimize the sum of squared distances between the data points and the centroids of their assigned clusters. The objective function that needs to be minimized can be expressed as follows:
 
 $$J = ∑ (x - μ_c)^2$$
