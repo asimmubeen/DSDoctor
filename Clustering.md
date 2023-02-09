@@ -29,3 +29,11 @@ Here is how the K-Means algorithm works:
 The K-Means algorithm is sensitive to the initial choice of centroids, and multiple runs of the algorithm with different initializations may lead to different results. To address this, a common practice is to run the algorithm multiple times with different initializations and choose the result that gives the best clustering according to a certain evaluation metric, such as the sum of squared distances between data points and their closest centroids.
 
 K-Means is a fast and efficient algorithm for clustering large datasets and is commonly used in applications such as image compression, market segmentation, and document classification. However, the algorithm has some limitations, such as the assumption of spherical cluster shapes and the requirement that the number of clusters K must be specified in advance.
+
+The K-means algorithm tries to minimize the sum of squared distances between the data points and the centroids of their assigned clusters. The objective function that needs to be minimized can be expressed as follows:
+
+$$J = ∑ (x - μ_c)^2$$
+
+where $x$ is a data point, $μ_c$ is the mean of the cluster to which $x$ belongs, and the summation is taken over all data points and all clusters.
+
+K-means can be sensitive to the initial placement of the centroids, so it is common to run the algorithm multiple times with different initializations to choose the best solution.
