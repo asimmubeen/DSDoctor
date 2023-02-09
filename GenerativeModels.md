@@ -27,3 +27,17 @@ The training process of a GAN can be summarized as follows:
 4. The process continues until the generator network can generate samples that are indistinguishable from the real, training data, or the discriminator network can perfectly distinguish the generated samples from the real samples.
 
 GANs have been used for a variety of tasks, including image synthesis, style transfer, and image completion, among others. Despite their success, GANs can be difficult to train and often suffer from instability issues such as mode collapse, where the generator network generates only a limited number of different samples. Nonetheless, GANs remain a powerful tool for generating new data samples that are representative of a given training dataset
+
+Let's assume that we have a real data distribution represented by $p_data(x)$, where x is a data point in a high-dimensional space. The goal of the generator network is to generate new samples from a noise distribution $p_z(z)$, where $z$ is a low-dimensional random noise vector. The generator network is represented as a function $G(z; θ_g)$, where $θ_g$ are the parameters of the generator network. The generated data distribution is represented by:
+
+$$p_g(x) = p_z(z) * G(z; θ_g)$$ where $*$ represents the convolution operation.
+
+The discriminator network is represented as a function $D(x; θ_d)$, where $θ_d$ are the parameters of the discriminator network. The discriminator network outputs a scalar value between $0$ and $1$, indicating the probability that a given sample x came from the real data distribution $p_{data}(x)$ rather than the generated data distribution $p_g(x)$.
+
+The GAN training process can be formalized as a two-player minimax game between the generator and the discriminator, where the generator tries to generate samples that can fool the discriminator, and the discriminator tries to accurately distinguish the generated samples from the real samples. The objective function for the GAN can be expressed as:
+
+$$J(θ_g, θ_d) = min_θ_g max_θ_d E_{xp_data(x)}[log D(x; θ_d)] + E_{zp_z(z)}[log(1 - D(G(z; θ_g); θ_d))]$$
+
+The objective function is optimized by alternating between updating the parameters of the generator network θ_g and the parameters of the discriminator network $θ_d$. The generator network is updated to generate samples that maximize the probability of the discriminator making a mistake, while the discriminator network is updated to minimize the probability of making a mistake.
+
+In practice, the optimization of the objective function can be challenging, due to the instability of the minimax game and the possible collapse of the generated data distribution to a limited number of modes. Nevertheless, GANs have shown to be a powerful tool for generating new data samples that resemble a given training dataset, and continue to be an active area of research in deep learning.
