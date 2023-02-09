@@ -36,7 +36,7 @@ The discriminator network is represented as a function $D(x; θ_d)$, where $θ_d
 
 The GAN training process can be formalized as a two-player minimax game between the generator and the discriminator, where the generator tries to generate samples that can fool the discriminator, and the discriminator tries to accurately distinguish the generated samples from the real samples. The objective function for the GAN can be expressed as:
 
-$$J(θ_g, θ_d) = min_θ_g max_θ_d E_{xp_data(x)}[log D(x; θ_d)] + E_{zp_z(z)}[log(1 - D(G(z; θ_g); θ_d))]$$
+$$J(θ_g, θ_d) = min_{θg} max_{θd} E_{xp_data(x)}{log D(x;θ_d)} + E_{zpz(z)}{log(1 - D(G(z; θ_g); θ_d))}$$
 
 The objective function is optimized by alternating between updating the parameters of the generator network θ_g and the parameters of the discriminator network $θ_d$. The generator network is updated to generate samples that maximize the probability of the discriminator making a mistake, while the discriminator network is updated to minimize the probability of making a mistake.
 
