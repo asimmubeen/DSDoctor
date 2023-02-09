@@ -30,6 +30,7 @@ The K-Means algorithm is sensitive to the initial choice of centroids, and multi
 
 K-Means is a fast and efficient algorithm for clustering large datasets and is commonly used in applications such as image compression, market segmentation, and document classification. However, the algorithm has some limitations, such as the assumption of spherical cluster shapes and the requirement that the number of clusters K must be specified in advance.
 
+### Mathematically ...
 The K-means algorithm tries to minimize the sum of squared distances between the data points and the centroids of their assigned clusters. The objective function that needs to be minimized can be expressed as follows:
 
 $$J = ∑ (x - μ_c)^2$$
@@ -37,3 +38,32 @@ $$J = ∑ (x - μ_c)^2$$
 where $x$ is a data point, $μ_c$ is the mean of the cluster to which $x$ belongs, and the summation is taken over all data points and all clusters.
 
 K-means can be sensitive to the initial placement of the centroids, so it is common to run the algorithm multiple times with different initializations to choose the best solution.
+
+## Python Code
+Here is an example of a simple implementation of the K-means algorithm in Python:
+
+```python
+import numpy as np
+from sklearn.cluster import KMeans
+
+# Load data
+X = np.array([[1, 2], [1, 4], [1, 0], [4, 2], [4, 4], [4, 0]])
+
+# Initialize the KMeans model
+kmeans = KMeans(n_clusters=2)
+
+# Fit the model to the data
+kmeans.fit(X)
+
+# Predict the cluster for each data point
+labels = kmeans.predict(X)
+
+# Get the cluster centers
+cluster_centers = kmeans.cluster_centers_
+
+# Print the results
+print("Cluster Labels:", labels)
+print("Cluster Centers:", cluster_centers)
+```
+
+In the example above, the K-Means model from the scikit-learn library is used to perform the K-means clustering. The n_clusters parameter specifies the number of clusters to form, in this case 2. The fit method is used to fit the model to the data. The predict method is then used to predict the cluster labels for each data point. The cluster centers are obtained using the cluster_centers attribute.
