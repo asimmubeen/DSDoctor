@@ -3,7 +3,7 @@ Clustering is a type of unsupervised machine learning technique where the goal i
 
 There are several different algorithms that can be used for clustering, including:
 
-[KMeans](kMeans-clustering): This is a popular and simple algorithm that partitions the data into K clusters, where K is a user-defined parameter.
+[KMeans](#kMeans-clustering): This is a popular and simple algorithm that partitions the data into K clusters, where K is a user-defined parameter.
 
 Hierarchical Clustering: This algorithm builds a hierarchy of clusters by successively merging or splitting existing clusters.
 
