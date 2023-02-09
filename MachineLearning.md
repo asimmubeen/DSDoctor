@@ -40,7 +40,7 @@ Unsupervised machine learning is a type of machine learning where the goal is to
 
 **Association Rule Learning**: This is the process of finding relationships between variables in a large dataset. Association rule learning algorithms are commonly used in market basket analysis and recommender systems. Apriori and Eclat are two common association rule learning algorithms.
 
-**Generative models**: These models generate new data samples that are similar to the input data. Examples of generative models include Generative Adversarial Networks (GANs), Variational Autoencoders (VAEs), and Restricted Boltzmann Machines (RBMs).
+**[Generative models](/GenerativeModels.md)**: These models generate new data samples that are similar to the input data. Examples of generative models include Generative Adversarial Networks (GANs), Variational Autoencoders (VAEs), and Restricted Boltzmann Machines (RBMs).
 
 **Non-negative Matrix Factorization (NMF)**: This is the process of factorizing a matrix into two non-negative matrices, where the product of the two matrices approximates the original matrix. NMF is commonly used for topic modeling and dimensionality reduction.
 
