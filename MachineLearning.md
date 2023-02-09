@@ -32,7 +32,7 @@ In unsupervised learning, the algorithm is trained on an unlabeled dataset, mean
 
 Unsupervised machine learning is a type of machine learning where the goal is to find structure or patterns in the data, without being given explicit labels or target values. Some common unsupervised learning methods are:
 
-**Clustering**: This method groups similar data points together based on some similarity metric. Examples of clustering algorithms include K-Means, Hierarchical Clustering, and DBSCAN.
+**[Clustering](/Clustering.md)**: This method groups similar data points together based on some similarity metric. Examples of clustering algorithms include K-Means, Hierarchical Clustering, and DBSCAN.
 
 **Dimensionality Reduction**: This is the process of reducing the number of features in the data while preserving the important information. This can be useful for visualizing high-dimensional data, reducing the complexity of the data, and removing noise. Common dimensionality reduction techniques include Principal Component Analysis (PCA), t-SNE, and Autoencoders.
 
