@@ -38,12 +38,12 @@ The GAN training process can be formalized as a two-player minimax game between 
 
 $$J(θ_g, θ_d) = min_{θ_g} max_{θ_d} E_{x}p_{data(x)}{log D(x;θ_d)} + E_{z}p_{z(z)}{log(1 - D(G(z; θ_g); θ_d))}$$
 
-The objective function is optimized by alternating between updating the parameters of the generator network θ_g and the parameters of the discriminator network $θ_d$. The generator network is updated to generate samples that maximize the probability of the discriminator making a mistake, while the discriminator network is updated to minimize the probability of making a mistake.
+The objective function is optimized by alternating between updating the parameters of the generator network $θ_g$ and the parameters of the discriminator network $θ_d$. The generator network is updated to generate samples that maximize the probability of the discriminator making a mistake, while the discriminator network is updated to minimize the probability of making a mistake.
 
 In practice, the optimization of the objective function can be challenging, due to the instability of the minimax game and the possible collapse of the generated data distribution to a limited number of modes. Nevertheless, GANs have shown to be a powerful tool for generating new data samples that resemble a given training dataset, and continue to be an active area of research in deep learning.
 
 ## Python Code (TensorFlow)
-Here's an example of a Generative Adversarial Network (GAN) implemented using TensorFlow in Python:
+Here's an example of a Generative Adversarial Network (GAN) implemented using **TensorFlow** in Python:
 
 ```python
 import tensorflow as tf
