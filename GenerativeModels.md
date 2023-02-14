@@ -41,3 +41,82 @@ $$J(θ_g, θ_d) = min_{θ_g} max_{θ_d} E_{x}p_{data(x)}{log D(x;θ_d)} + E_{z}p
 The objective function is optimized by alternating between updating the parameters of the generator network θ_g and the parameters of the discriminator network $θ_d$. The generator network is updated to generate samples that maximize the probability of the discriminator making a mistake, while the discriminator network is updated to minimize the probability of making a mistake.
 
 In practice, the optimization of the objective function can be challenging, due to the instability of the minimax game and the possible collapse of the generated data distribution to a limited number of modes. Nevertheless, GANs have shown to be a powerful tool for generating new data samples that resemble a given training dataset, and continue to be an active area of research in deep learning.
+
+### Python Code
+Here's an example of a simple GAN implemented in Python using the Keras API:
+
+```python
+import numpy as np
+from keras.layers import Dense, Flatten, Reshape
+from keras.layers.advanced_activations import LeakyReLU
+from keras.models import Sequential
+from keras.optimizers import Adam
+import matplotlib.pyplot as plt
+
+# Load MNIST data
+from keras.datasets import mnist
+(x_train, _), (_, _) = mnist.load_data()
+
+# Rescale -1 to 1
+x_train = x_train / 127.5 - 1.
+x_train = np.expand_dims(x_train, axis=3)
+
+# Generator model
+generator = Sequential()
+generator.add(Dense(128 * 7 * 7, activation="relu", input_dim=100))
+generator.add(Reshape((7, 7, 128)))
+generator.add(LeakyReLU(alpha=0.01))
+generator.add(Dense(256, activation="relu"))
+generator.add(LeakyReLU(alpha=0.01))
+generator.add(Dense(1, activation="tanh"))
+generator.compile(loss="binary_crossentropy", optimizer=Adam(lr=0.0002, beta_1=0.5))
+
+# Discriminator model
+discriminator = Sequential()
+discriminator.add(Flatten(input_shape=(28, 28, 1)))
+discriminator.add(Dense(256, activation="relu"))
+discriminator.add(LeakyReLU(alpha=0.01))
+discriminator.add(Dense(1, activation="sigmoid"))
+discriminator.compile(loss="binary_crossentropy", optimizer=Adam(lr=0.0002, beta_1=0.5))
+
+# Combined model
+gan = Sequential()
+gan.add(generator)
+gan.add(discriminator)
+gan.compile(loss="binary_crossentropy", optimizer=Adam(lr=0.0002, beta_1=0.5))
+
+# Training loop
+batch_size = 128
+epochs = 10000
+sample_interval = 1000
+for epoch in range(epochs):
+    # Train discriminator
+    idx = np.random.randint(0, x_train.shape[0], batch_size)
+    real_imgs = x_train[idx]
+    noise = np.random.normal(0, 1, (batch_size, 100))
+    fake_imgs = generator.predict(noise)
+    d_loss_real = discriminator.train_on_batch(real_imgs, np.ones((batch_size, 1)))
+    d_loss_fake = discriminator.train_on_batch(fake_imgs, np.zeros((batch_size, 1)))
+    d_loss = 0.5 * np.add(d_loss_real, d_loss_fake)
+    
+    # Train generator
+    noise = np.random.normal(0, 1, (batch_size, 100))
+    g_loss = gan.train_on_batch(noise, np.ones((batch_size, 1)))
+    
+    # Print progress
+    if epoch % sample_interval == 0:
+        print(f"Epoch {epoch}: Discriminator loss: {d_loss}, Generator loss: {g_loss}")
+        noise = np.random.normal(0, 1, (16, 100))
+        gen_imgs = generator.predict(noise)
+        gen_imgs = 0.5 * gen_imgs + 0.5
+        fig, axs = plt.subplots(4, 4)
+        count = 0
+        for i in range(4):
+            for j in range(4):
+                axs[i,j].imshow(gen_imgs[count, :,:,0], cmap="gray")
+                axs[i,j].axis("off")
+                count += 1
+        plt.show()
+```
+
+This code trains a GAN on the MNIST dataset to generate handwritten digits. The generator model takes a random noise vector as input and produces an image, while the discriminator model takes an image as input and outputs a probability
