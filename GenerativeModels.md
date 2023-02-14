@@ -42,8 +42,93 @@ The objective function is optimized by alternating between updating the paramete
 
 In practice, the optimization of the objective function can be challenging, due to the instability of the minimax game and the possible collapse of the generated data distribution to a limited number of modes. Nevertheless, GANs have shown to be a powerful tool for generating new data samples that resemble a given training dataset, and continue to be an active area of research in deep learning.
 
-### Python Code
-Here's an example of a simple GAN implemented in Python using the Keras API:
+## Python Code (TensorFlow)
+Here's an example of a Generative Adversarial Network (GAN) implemented using TensorFlow in Python:
+
+```python
+import tensorflow as tf
+from tensorflow.keras import layers
+
+# Define the generator
+def make_generator_model():
+    model = tf.keras.Sequential()
+    model.add(layers.Dense(256, use_bias=False, input_shape=(100,)))
+    model.add(layers.BatchNormalization())
+    model.add(layers.LeakyReLU())
+
+    model.add(layers.Dense(512, use_bias=False))
+    model.add(layers.BatchNormalization())
+    model.add(layers.LeakyReLU())
+
+    model.add(layers.Dense(28*28*1, use_bias=False, activation='tanh'))
+    model.add(layers.Reshape((28, 28, 1)))
+
+    return model
+
+# Define the discriminator
+def make_discriminator_model():
+    model = tf.keras.Sequential()
+    model.add(layers.Flatten())
+    model.add(layers.Dense(512))
+    model.add(layers.LeakyReLU())
+    model.add(layers.Dense(256))
+    model.add(layers.LeakyReLU())
+    model.add(layers.Dense(1))
+
+    return model
+
+# Define the loss functions for the generator and discriminator
+cross_entropy = tf.keras.losses.BinaryCrossentropy(from_logits=True)
+
+def discriminator_loss(real_output, fake_output):
+    real_loss = cross_entropy(tf.ones_like(real_output), real_output)
+    fake_loss = cross_entropy(tf.zeros_like(fake_output), fake_output)
+    total_loss = real_loss + fake_loss
+    return total_loss
+
+def generator_loss(fake_output):
+    return cross_entropy(tf.ones_like(fake_output), fake_output)
+
+# Define the optimizer for the generator and discriminator
+generator_optimizer = tf.keras.optimizers.Adam(1e-4)
+discriminator_optimizer = tf.keras.optimizers.Adam(1e-4)
+
+# Define the GAN
+generator = make_generator_model()
+discriminator = make_discriminator_model()
+
+@tf.function
+def train_step(images):
+    noise = tf.random.normal([BATCH_SIZE, 100])
+
+    with tf.GradientTape() as gen_tape, tf.GradientTape() as disc_tape:
+        generated_images = generator(noise, training=True)
+
+        real_output = discriminator(images, training=True)
+        fake_output = discriminator(generated_images, training=True)
+
+        gen_loss = generator_loss(fake_output)
+        disc_loss = discriminator_loss(real_output, fake_output)
+
+    gradients_of_generator = gen_tape.gradient(gen_loss, generator.trainable_variables)
+    gradients_of_discriminator = disc_tape.gradient(disc_loss, discriminator.trainable_variables)
+
+    generator_optimizer.apply_gradients(zip(gradients_of_generator, generator.trainable_variables))
+    discriminator_optimizer.apply_gradients(zip(gradients_of_discriminator, discriminator.trainable_variables))
+
+# Train the GAN
+EPOCHS = 100
+BATCH_SIZE = 256
+
+for epoch in range(EPOCHS):
+    for batch in range(train_images.shape[0] // BATCH_SIZE):
+        images = train_images[batch*BATCH_SIZE:(batch+1)*BATCH_SIZE]
+        train_step(images)
+```
+This code defines a GAN that generates images similar to those in the MNIST dataset. The generator creates images from random noise, and the discriminator tries to distinguish between real and fake images. The generator is trained to create images that fool the discriminator, while the discriminator is trained to correctly identify real and fake images.
+
+## Python Code (Keras)
+Here's an example of a simple GAN implemented in Python using the **Keras API**:
 
 ```python
 import numpy as np
