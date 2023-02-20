@@ -42,27 +42,30 @@ K-means can be sensitive to the initial placement of the centroids, so it is com
 Here is an example of a simple implementation of the K-means algorithm in Python:
 
 ```python
+# Import required libraries
 import numpy as np
+import pandas as pd
 from sklearn.cluster import KMeans
+from sklearn.datasets import make_blobs
+import matplotlib.pyplot as plt
 
-# Load data
-X = np.array([[1, 2], [1, 4], [1, 0], [4, 2], [4, 4], [4, 0]])
+# Generate a sample dataset
+X, y_true = make_blobs(n_samples=300, centers=4, cluster_std=0.60, random_state=0)
 
-# Initialize the KMeans model
-kmeans = KMeans(n_clusters=2)
-
-# Fit the model to the data
+# Apply K-Means clustering algorithm
+kmeans = KMeans(n_clusters=4)
 kmeans.fit(X)
+y_kmeans = kmeans.predict(X)
 
-# Predict the cluster for each data point
-labels = kmeans.predict(X)
-
-# Get the cluster centers
-cluster_centers = kmeans.cluster_centers_
-
-# Print the results
-print("Cluster Labels:", labels)
-print("Cluster Centers:", cluster_centers)
+# Visualize the results
+plt.scatter(X[:, 0], X[:, 1], c=y_kmeans, s=50, cmap='viridis')
+centers = kmeans.cluster_centers_
+plt.scatter(centers[:, 0], centers[:, 1], c='black', s=200, alpha=0.5);
+plt.show()
 ```
 
-In the example above, the K-Means model from the scikit-learn library is used to perform the K-means clustering. The n_clusters parameter specifies the number of clusters to form, in this case 2. The fit method is used to fit the model to the data. The predict method is then used to predict the cluster labels for each data point. The cluster centers are obtained using the cluster_centers attribute.
+In this example, we first generate a sample dataset using the make_blobs function from the Scikit-learn library. We then apply the KMeans clustering algorithm using the KMeans function from the same library. Finally, we plot the results using the scatter function from the matplotlib library.
+
+The resulting plot shows the clustered data points and the centroids of each cluster, which are represented by the black circles in the plot. The clusters are identified by different colors.
+
+Note that the number of clusters is specified by the n_clusters parameter when calling the KMeans function. In this example, we set it to 4, which is the same as the number of centers used in the make_blobs function to generate the sample data. However, in practice, the optimal number of clusters may not be known beforehand and may need to be determined using other techniques such as the elbow method or silhouette analysis.
