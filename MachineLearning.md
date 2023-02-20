@@ -34,7 +34,7 @@ Unsupervised machine learning is a type of machine learning where the goal is to
 
 **[Clustering](/Clustering.md)**: This method groups similar data points together based on some similarity metric. Examples of clustering algorithms include K-Means, Hierarchical Clustering, and DBSCAN.
 
-**[Dimensionality Reduction](/DimentionalityReduction.md)**: This is the process of reducing the number of features in the data while preserving the important information. This can be useful for visualizing high-dimensional data, reducing the complexity of the data, and removing noise. Common dimensionality reduction techniques include Principal Component Analysis (PCA), t-SNE, and Autoencoders.
+**[Dimensionality Reduction](/DimensionalityReduction.md)**: This is the process of reducing the number of features in the data while preserving the important information. This can be useful for visualizing high-dimensional data, reducing the complexity of the data, and removing noise. Common dimensionality reduction techniques include Principal Component Analysis (PCA), t-SNE, and Autoencoders.
 
 **Anomaly detection**: This method is used to detect data points that are significantly different from the majority of the data. Examples of anomaly detection algorithms include Isolation Forest, Z-Score, Mahalanobis Distance, One-Class SVM, and Local Outlier Factor.
 
