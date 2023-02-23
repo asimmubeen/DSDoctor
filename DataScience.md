@@ -25,6 +25,7 @@ Data Science involves several steps, following are the most important steps:
 
 5. **Data visualization**: Presenting the insights and results obtained from the data in a clear and understandable way, often through graphs, charts, or maps.
 
+## Machine Learning Algorithms
 Following are some popular machine learning algorithms used to solve data science problems:
 
 **[Linear Regression](/LinearRegression.md)**
