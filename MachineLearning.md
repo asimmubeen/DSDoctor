@@ -44,4 +44,4 @@ These unsupervised learning methods can be used for a wide range of tasks, such 
 
 
 ## **Reinforcement learning**
-In reinforcement learning, an agent learns to interact with an environment by performing actions and observing the resulting rewards or penalties. The goal is to learn a policy that maximizes a reward signal over time. Examples: playing chess or Go, autonomous navigation. More information about this topic with a simple example can be find [here](/ReinforcementLearning.md).
+In [reinforcement learning](/ReinforcementLearning.md), an agent learns to interact with an environment by performing actions and observing the resulting rewards or penalties. The goal is to learn a policy that maximizes a reward signal over time. Examples: playing chess or Go, autonomous navigation. More information about this topic with a simple example can be find [here](/ReinforcementLearning.md).
