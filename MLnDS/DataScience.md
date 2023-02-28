@@ -28,22 +28,22 @@ Data Science involves several steps, following are the most important steps:
 ## Machine Learning Algorithms
 Following are some popular machine learning algorithms used to solve data science problems:
 
-**[Linear Regression](/LinearRegression.md)**
+**[Linear Regression](/MLnDS/LinearRegression.md)**
 
-**[Logistic regression](/LogisticRegression.md)**
+**[Logistic regression](/MLnDS/LogisticRegression.md)**
 
-**[Support Vector Machines (SVM)](/SVM.md)**
+**[Support Vector Machines (SVM)](/MLnDS/SVM.md)**
 
-**[Decision Trees](/DecisionTrees.md)**
+**[Decision Trees](/MLnDS/DecisionTrees.md)**
 
-**[Random Forest](/RandomForest.md)**
+**[Random Forest](/MLnDS/RandomForest.md)**
 
-**[Naive Bayes](/NaiveBayes.md)**
+**[Naive Bayes](/MLnDS/NaiveBayes.md)**
 
-**[Clustering](/Clustering.md)**
+**[Clustering](/MLnDS/Clustering.md)**
 
-**[Dimensionality Reduction](/DimensionalityReduction.md)**
+**[Dimensionality Reduction](/MLnDS/DimensionalityReduction.md)**
 
-**[Generative models](/GenerativeModels.md)**
+**[Generative models](/MLnDS/GenerativeModels.md)**
 
-**[Reinforcement Learning](/ReinforcementLearning.md)**
+**[Reinforcement Learning](/MLnDS/ReinforcementLearning.md)**
