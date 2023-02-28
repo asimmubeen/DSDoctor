@@ -4,7 +4,8 @@ Neural networks are a class of algorithms that are loosely inspired by the struc
 
 Here are some steps you can follow to learn about neural networks:
 
-1. Learn the basics of machine learning: Before diving into neural networks, it's important to understand the basics of machine learning. This includes topics like supervised and unsupervised learning, linear regression, logistic regression, decision trees, and clustering.
+1. Start with the basics: Before diving into the intricacies of neural networks, it's important to have a solid understanding of basic linear algebra and calculus concepts, as these form the foundation of neural network operations.
+2. Learn the basics of machine learning: Before diving into neural networks, it's important to understand the basics of machine learning. This includes topics like supervised and unsupervised learning, linear regression, logistic regression, decision trees, and clustering.
 
 2. Understand the architecture of a neural network: A neural network is made up of multiple layers of interconnected neurons. Each neuron performs a simple mathematical operation on its inputs and passes the result on to the next layer. The final layer produces the output of the network. There are many different types of layers, such as fully connected layers, convolutional layers, and recurrent layers.
 
