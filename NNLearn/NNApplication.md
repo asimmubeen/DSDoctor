@@ -61,4 +61,4 @@ print('Test accuracy:', test_acc)
 
 This code defines a neural network with a single hidden layer of 512 neurons and an output layer of 10 neurons (corresponding to the 10 possible digits). The model is then compiled with the RMSprop optimizer and categorical cross-entropy loss function, and trained on the MNIST dataset for 5 epochs with a batch size of 128. Finally, the model is evaluated on the test set and the accuracy is printed.
 
-
+Click [here](/NNLearn/IntrotoNN.md) to go back ...
