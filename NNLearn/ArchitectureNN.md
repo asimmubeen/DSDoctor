@@ -36,3 +36,8 @@ This function sets all negative values in the input data to zero and leaves posi
 This function maps any input value to a value between -1 and 1, making it useful for problems where the input data has negative and positive values.
 
 There are also other activation functions like softmax, Leaky ReLU, and Swish that can be used depending on the problem and the desired output.
+
+Click [here](/NNLearn/IntrotoNN.md) to go back ...
+
+
+
