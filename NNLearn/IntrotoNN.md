@@ -8,3 +8,13 @@ Another example of neural networks is natural language processing, which is the 
 Neural networks can also be used in financial applications such as predicting stock prices or fraud detection. The network can be trained on historical data to identify patterns and make predictions on future events.
 
 In essence, neural networks are a versatile and powerful tool that can be applied to many different types of data and problems, allowing machines to learn and make predictions from complex data sets.
+
+To understand and to get to know neural netwroks more, click the followings one by one.
+
+### [Architecture of Neural Network](/NNLearn/ArchitectureNN.md)
+
+### [Learning Steps of Neural Network](/NNLearn/LearningSteps.md)
+
+### [Framework For Neural Network](/NNLearn/NNFrameworks.md)
+
+### [Application of Neural Network (Python Code)](/NNLearn/NNApplication.md)
