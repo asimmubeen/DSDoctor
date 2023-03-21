@@ -18,3 +18,5 @@ Here's a brief overview of some of the most popular frameworks for building neur
   MXNet is a popular open-source framework for building neural networks, developed by Amazon. It is particularly popular for its speed and scalability, as well as its support for distributed training across multiple GPUs and servers. MXNet supports a wide range of neural network architectures, including feedforward networks, convolutional networks, and recurrent networks, and it can be used with a variety of programming languages, including Python, C++, and R.
 
 Each of these frameworks has its own strengths and weaknesses, and the choice of framework will depend on the specific needs and requirements of your project. However, all of these frameworks provide powerful tools and APIs for building and training neural networks, and they are widely used in industry and academia for a wide range of applications, including image recognition, natural language processing, and speech recognition.
+
+Click [here](/NNLearn/IntrotoNN.md) to go back ...
