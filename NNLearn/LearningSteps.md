@@ -20,3 +20,5 @@ Here are some steps you can follow to learn about neural networks:
 7. Practice on real-world problems: Finally, practice applying neural networks to real-world problems. This will help you develop practical skills and gain experience working with real data.
 
 These steps help one get started with learning about neural networks! Let us follow these steps.
+
+Click [here](/NNLearn/IntrotoNN.md) to go back ...
